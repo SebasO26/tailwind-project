@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -19,36 +19,46 @@
     </style>
 </head>
 
-<body class="bg-oatCream flex flex-col min-h-screen">
-    <header>
-        <nav class="flex flex-wrap items-center gap-10 bg-warmBeige border-rusticBrown/20">
-            <img src="img/logo.png" alt="Logo La Bendición" class="size-20">
-            <ul class="text-oatCream flex gap-10 text-lg h-20 items-center">
-                <a href="index.html" class="size-20 flex flex-col justify-center text-center hover:bg-rusticBrown">
-                    <li>Inicio</li>
-                </a>
-                <a href="/pages/precios.html"
-                    class="size-20 flex flex-col justify-center text-center hover:bg-rusticBrown">
-                    <li>Precios</li>
-                </a>
-                <a href="/pages/pedidos.html"
-                    class="size-20 flex flex-col justify-center text-center hover:bg-rusticBrown">
-                    <li>Pedidos</li>
-                </a>
+<body class="bg-oatCream flex flex-col min-h-screen text-rusticBrown">
+    <header class="bg-warmBeige shadow-sm">
+        <nav
+            class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between p-4 sm:px-8 gap-4 border-b border-rusticBrown/20">
+            <img src="img/logo.png" alt="Logo La Bendición" class="w-16 h-16 object-contain">
+
+            <ul class="flex flex-wrap justify-center gap-2 sm:gap-6 text-base sm:text-lg font-semibold">
+                <li>
+                    <a href="index.html"
+                        class="px-4 py-2 rounded-lg block hover:bg-rusticBrown hover:text-oatCream transition-colors">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/precios.html"
+                        class="px-4 py-2 rounded-lg block hover:bg-rusticBrown hover:text-oatCream transition-colors">
+                        Precios
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/pedidos.html"
+                        class="px-4 py-2 rounded-lg block hover:bg-rusticBrown hover:text-oatCream transition-colors">
+                        Pedidos
+                    </a>
+                </li>
             </ul>
         </nav>
-        <h1 class="text-4xl text-center mt-15 text-warmBeige">Panadería la bendición</h1>
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center my-6 md:my-10 text-deepCocoa px-4">
+            Panadería La Bendición
+        </h1>
     </header>
 
-    <main class="min-h-dvh flex-1 p-4 md:p-8">
-        <section
-            class="bg-warmBeige mx-auto m-6 md:m-10 rounded-2xl p-6 md:p-10 shadow-lg border border-goldenWheat/20">
-
-            <h2 class="text-3xl font-extrabold text-deepCocoa mb-6 border-b border-rusticBrown/20 pb-3">
+    <main class="flex-1 p-4 md:p-8 max-w-7xl mx-auto w-full space-y-8">
+        <section class="bg-warmBeige rounded-2xl p-6 md:p-10 shadow-lg border border-goldenWheat/20">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-deepCocoa mb-6 border-b border-rusticBrown/20 pb-3">
                 ¿Quiénes somos?
             </h2>
 
-            <div class="space-y-4 text-rusticBrown text-lg leading-relaxed">
+            <div class="space-y-4 text-base md:text-lg leading-relaxed">
                 <p>
                     Más que una panadería, somos un lugar creado para llenarte de recuerdos, experiencias y momentos de
                     felicidad. Nos especializamos en la elaboración de panadería artesanal, tortas y repostería,
@@ -60,50 +70,51 @@
                     corazón de nuestros clientes.
                 </p>
             </div>
-
-
         </section>
-        <section
-            class="bg-warmBeige mx-auto m-6 md:m-10 rounded-2xl p-6 md:p-10 shadow-lg border border-goldenWheat/20">
 
-            <h2 class="text-3xl font-extrabold text-deepCocoa mb-6 border-b border-rusticBrown/20 pb-3">
+        <section class="bg-warmBeige rounded-2xl p-6 md:p-10 shadow-lg border border-goldenWheat/20">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-deepCocoa mb-6 border-b border-rusticBrown/20 pb-3">
                 Productos y servicios
             </h2>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
-                <div class="bg-oatCream rounded-2xl flex flex-col gap-5">
-                    <img src="img/panChocha2.jpeg" alt="" class="w-auto rounded-tr-2xl rounded-tl-2xl max-h-100">
-                    <h3 class="text-2xl text-center">
-                        Pan chocha
-                    </h3>
-                    <div class="space-y-4 text-rusticBrown text-lg leading-relaxed p-7">
-                        <p>
-                            Pan artesanal de gran tamaño, completamente relleno de 3 diferentes tipos de queso: Cuada,
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Tarjeta 1 -->
+                <div class="bg-oatCream rounded-2xl overflow-hidden shadow-md flex flex-col justify-between">
+                    <div>
+                        <img src="img/panChocha2.jpeg" alt="Pan Chocha"
+                            class="w-full aspect-video sm:aspect-square object-cover">
+                        <h3 class="text-2xl font-bold text-deepCocoa text-center pt-5 px-4">
+                            Pan chocha
+                        </h3>
+                        <p class="text-base md:text-lg leading-relaxed p-6">
+                            Pan artesanal de gran tamaño, completamente relleno de 3 diferentes tipos de queso: Cuajada,
                             queso costeño y queso mozzarella, perfecta alternativa a los panes tradicionales.
                         </p>
                     </div>
                 </div>
 
-                <div class="bg-oatCream rounded-2xl flex flex-col gap-5">
-                    <img src="img/panBono.jpg" alt="" class="w-auto rounded-tr-2xl rounded-tl-2xl max-h-100">
-                    <h3 class="text-2xl text-center">
-                        Pan de Bono
-                    </h3>
-                    <div class="space-y-4 text-rusticBrown text-lg leading-relaxed p-7">
-                        <p>
+                <div class="bg-oatCream rounded-2xl overflow-hidden shadow-md flex flex-col justify-between">
+                    <div>
+                        <img src="img/panBono.jpg" alt="Pan de Bono"
+                            class="w-full aspect-video sm:aspect-square object-cover">
+                        <h3 class="text-2xl font-bold text-deepCocoa text-center pt-5 px-4">
+                            Pan de Bono
+                        </h3>
+                        <p class="text-base md:text-lg leading-relaxed p-6">
                             Pan tradicional Colombiano, originario del Valle del Cauca, sus principales ingredientes
                             para su sabor es la fécula de maíz, almidón de yuca, huevo y queso costeño.
                         </p>
                     </div>
                 </div>
 
-                <div class="bg-oatCream rounded-2xl flex flex-col gap-5">
-                    <img src="img/almojabana.jpeg" alt="" class="w-auto rounded-tr-2xl rounded-tl-2xl max-h-100">
-                    <h3 class="text-2xl text-center">
-                        Almojábana
-                    </h3>
-                    <div class="space-y-4 text-rusticBrown text-lg leading-relaxed p-7">
-                        <p>
+                <div class="bg-oatCream rounded-2xl overflow-hidden shadow-md flex flex-col justify-between">
+                    <div>
+                        <img src="img/almojabana.jpeg" alt="Almojábana"
+                            class="w-full aspect-video sm:aspect-square object-cover">
+                        <h3 class="text-2xl font-bold text-deepCocoa text-center pt-5 px-4">
+                            Almojábana
+                        </h3>
+                        <p class="text-base md:text-lg leading-relaxed p-6">
                             Pan originario de la Región Andina, elaborado con queso campesino y harina de maíz, tiene
                             una textura suave por dentro y ligeramente crocante por fuera.
                         </p>
@@ -112,41 +123,62 @@
             </div>
         </section>
 
-        <section
-            class="bg-warmBeige mx-auto m-6 md:m-10 rounded-2xl p-6 md:p-10 shadow-lg border border-goldenWheat/20">
-            <h2 class="text-3xl font-extrabold text-deepCocoa mb-6 border-b border-rusticBrown/20 pb-3">Beneficios de
-                comprarnos</h2>
-            <ul class="list-disc">
-                <li class="text-rusticBrown text-lg"><strong>Mejores precios del mercado: </strong> fabricamos nuestra
-                    materia prima para después
-                    transformarla en el producto final, esto nos ayuda a reducir los costos.</li>
-                <li class="text-rusticBrown text-lg"><strong>Productos siempre frescos: </strong> al ser fabricantes de
-                    nuestra materia prima, siempre nuestros productos serán siempre frescos y de buena calidad.</li>
-                <li class="text-rusticBrown text-lg"><strong>Atención personalizada: </strong>nos adaptamos a tus
-                    necesidades y tenemos la flexibilidad de hacer el pan que desees aunque no esté en el catálogo.</li>
-                <li class="text-rusticBrown text-lg"><strong>Preparación artesanal: </strong> cuidamos cada etapa de la
-                    elaboración, cada detalle y tenemos una fuerte base en las recetas ya desarrolladas.</li>
-                <li class="text-rusticBrown text-lg"><strong>Facilidad de compra y servicio: </strong>tenemos múltiples
-                    canales de atención, desde los canales virtuales como WhatsApp, llamada teléfonica, redes sociales,
-                    hasta los canales presenciales como la atención desde el local.</li>
+        <section class="bg-warmBeige rounded-2xl p-6 md:p-10 shadow-lg border border-goldenWheat/20">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-deepCocoa mb-6 border-b border-rusticBrown/20 pb-3">
+                Beneficios de comprarnos
+            </h2>
+            <ul class="list-disc pl-5 space-y-3 text-base md:text-lg">
+                <li>
+                    <strong>Mejores precios del mercado:</strong> Fabricamos nuestra materia prima para después
+                    transformarla en el producto final, esto nos ayuda a reducir los costos.
+                </li>
+                <li>
+                    <strong>Productos siempre frescos:</strong> Al ser fabricantes de nuestra materia prima, siempre
+                    nuestros productos serán frescos y de excelente calidad.
+                </li>
+                <li>
+                    <strong>Atención personalizada:</strong> Nos adaptamos a tus necesidades y tenemos la flexibilidad
+                    de hacer el pan que desees aunque no esté en el catálogo.
+                </li>
+                <li>
+                    <strong>Preparación artesanal:</strong> Cuidamos cada etapa de la elaboración, cada detalle y
+                    tenemos una fuerte base en recetas tradicionales.
+                </li>
+                <li>
+                    <strong>Facilidad de compra y servicio:</strong> Tenemos múltiples canales de atención, desde
+                    virtuales (WhatsApp, llamadas, redes sociales) hasta atención presencial en nuestro local.
+                </li>
             </ul>
         </section>
 
-        <section
-            class="bg-warmBeige mx-auto m-6 md:m-10 rounded-2xl p-6 md:p-10 shadow-lg border border-goldenWheat/20">
-            <h2 class="text-3xl font-extrabold text-deepCocoa mb-6 border-b border-rusticBrown/20 pb-3">Encuéntranos
+        <section class="bg-warmBeige rounded-2xl p-6 md:p-10 shadow-lg border border-goldenWheat/20">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-deepCocoa mb-6 border-b border-rusticBrown/20 pb-3">
+                Encuéntranos
             </h2>
-            <p class="text-rusticBrown text-lg"><strong>Dirección: </strong>Calle 123 #56-27, El Poblado.</p>
-            <p class="text-rusticBrown text-lg"><strong>Correo electrónico: </strong><a
-                    href="mailto:panaderialabendicion@gmail.com">panaderialabendicion@gmail.com</a></p>
-            <p class="text-rusticBrown text-lg"><strong>¿Tienes alguna duda?</strong><br>Escríbenos al <a
-                    href="wa.me/300000000" class="underline">WhatsApp</a> para
-                pedidos y dudas.</p>
+            <div class="space-y-3 text-base md:text-lg">
+                <p><strong>Dirección:</strong> Calle 123 #56-27, El Poblado.</p>
+                <p>
+                    <strong>Correo electrónico:</strong>
+                    <a href="mailto:panaderialabendicion@gmail.com"
+                        class="underline hover:text-deepCocoa transition-colors break-all">
+                        panaderialabendicion@gmail.com
+                    </a>
+                </p>
+                <p>
+                    <strong>¿Tienes alguna duda?</strong><br>
+                    Escríbenos al
+                    <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer"
+                        class="font-bold underline hover:text-deepCocoa transition-colors">
+                        WhatsApp
+                    </a> para pedidos y consultas.
+                </p>
+            </div>
         </section>
     </main>
 
-    <footer class="flex flex-wrap items-center justify-center bg-warmBeige px-5 border-rusticBrown/20 h-25">
-        <p class="text-rusticBrown text-lg">Panadería la bendición, donde cada bocado guía al camino de la iluminación
+    <footer class="bg-warmBeige border-t border-rusticBrown/20 p-6 mt-10">
+        <p class="text-center text-base md:text-lg font-medium max-w-xl mx-auto">
+            Panadería La Bendición, donde cada bocado guía al camino de la iluminación.
         </p>
     </footer>
 </body>
