@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --color-goldenWheat: #DAA520;
+            --color-rusticBrown: #8B4513;
+            --color-oatCream: #F5F5DC;
+            --color-warmBeige: #D2B48C;
+            --color-deepCocoa: #5C3317;
+        }
+    </style>
+</head>
+
+<body class="bg-oatCream min-h-screen flex flex-col">
+    <header>
+        <nav class="flex flex-wrap items-center gap-10 bg-warmBeige border-rusticBrown/20">
+            <img src="../img/logo.png" alt="Logo La Bendición" class="size-20">
+            <ul class="text-oatCream flex gap-10 text-lg h-20 items-center">
+                <a href="../index.html" class="size-20 flex flex-col justify-center text-center hover:bg-rusticBrown">
+                    <li>Inicio</li>
+                </a>
+                <a href="precios.html" class="size-20 flex flex-col justify-center text-center hover:bg-rusticBrown">
+                    <li>Precios</li>
+                </a>
+                <a href="pedidos.html" class="size-20 flex flex-col justify-center text-center hover:bg-rusticBrown">
+                    <li>Pedidos</li>
+                </a>
+            </ul>
+        </nav>
+        <h1 class="text-4xl text-center mt-15 text-warmBeige">Panadería la bendición</h1>
+    </header>
+
+    <main class="flex-1 p-4 md:p-8">
+        <section
+            class="bg-warmBeige mx-auto m-6 md:m-10 rounded-2xl p-6 md:p-10 shadow-lg border border-goldenWheat/20">
+            <h2 class="text-3xl font-extrabold text-deepCocoa mb-6 border-b border-rusticBrown/20 pb-3">
+                Tarifas para eventos
+            </h2>
+            <p class="text-rusticBrown text-lg">Elige tu paquete y disfruta de nuestras delicias.</p>
+            <div class="w-full overflow-x-auto rounded-xl border border-deepCocoa shadow-sm mt-10">
+
+                <table class="w-full border-collapse text-left text-sm">
+
+                    <thead class="bg-deepCocoa text-oatCream">
+                        <tr>
+                            <th class="px-6 py-4 font-semibold">
+                                Cantidad de personas
+                            </th>
+                            <th class="px-6 py-4 font-semibold">
+                                Paquete
+                            </th>
+                            <th class="px-6 py-4 font-semibold">
+                                Precio
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="divide-y divide-warmBeige bg-oatCream text-deepCocoa">
+
+                        <tr class="transition-colors duration-200 hover:bg-goldenWheat/20">
+                            <td rowspan="3" class="px-6 py-4 align-middle font-bold">
+                                10-20
+                            </td>
+                            <td class="px-6 py-4">Básico</td>
+                            <td class="px-6 py-4 font-semibold">$150.000</td>
+                        </tr>
+
+                        <tr class="transition-colors duration-200 hover:bg-goldenWheat/20">
+                            <td class="px-6 py-4">Especial</td>
+                            <td class="px-6 py-4 font-semibold">$220.000</td>
+                        </tr>
+
+                        <tr class="transition-colors duration-200 hover:bg-goldenWheat/20">
+                            <td class="px-6 py-4">Premium</td>
+                            <td class="px-6 py-4 font-semibold">$300.000</td>
+                        </tr>
+
+                        <tr class="transition-colors duration-200 hover:bg-goldenWheat/20">
+                            <td rowspan="3" class="px-6 py-4 align-middle font-bold">
+                                21-40
+                            </td>
+                            <td class="px-6 py-4">Básico</td>
+                            <td class="px-6 py-4 font-semibold">$400.000</td>
+                        </tr>
+
+                        <tr class="transition-colors duration-200 hover:bg-goldenWheat/20">
+                            <td class="px-6 py-4">Especial</td>
+                            <td class="px-6 py-4 font-semibold">$480.000</td>
+                        </tr>
+
+                        <tr class="transition-colors duration-200 hover:bg-goldenWheat/20">
+                            <td class="px-6 py-4">Premium</td>
+                            <td class="px-6 py-4 font-semibold">$580.000</td>
+                        </tr>
+
+                        <tr class="transition-colors duration-200 hover:bg-goldenWheat/20">
+                            <td rowspan="3" class="px-6 py-4 align-middle font-bold">
+                                41-80
+                            </td>
+                            <td class="px-6 py-4">Básico</td>
+                            <td class="px-6 py-4 font-semibold">$700.000</td>
+                        </tr>
+
+                        <tr class="transition-colors duration-200 hover:bg-goldenWheat/20">
+                            <td class="px-6 py-4">Especial</td>
+                            <td class="px-6 py-4 font-semibold">$830.000</td>
+                        </tr>
+
+                        <tr class="transition-colors duration-200 hover:bg-goldenWheat/20">
+                            <td class="px-6 py-4">Premium</td>
+                            <td class="px-6 py-4 font-semibold">$1.000.000</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-lg text-rusticBrown mt-10">Si necesitas una mayor asesoría porque no hay algún plan que se
+                acomode
+                a tu presupuesto o necesidad, <a href="#modal" class="underline">contáctanos.</a></p>
+        </section>
+    </main>
+
+    <div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center
+            bg-deepCocoa/60 p-4 target:flex">
+
+        <div class="relative w-full max-w-lg rounded-2xl
+                bg-oatCream p-6 shadow-xl">
+
+            <div class="mb-6 flex items-center justify-between">
+                <h2 class="text-2xl font-bold text-deepCocoa">
+                    Contacto vía Correo.
+                </h2>
+
+                <a href="#" class="text-2xl font-bold text-rusticBrown
+                      hover:text-goldenWheat">
+                    &times;
+                </a>
+            </div>
+
+            <form class="flex flex-col gap-4">
+
+                <div class="flex flex-col gap-2">
+                    <label class="font-semibold text-deepCocoa">
+                        Nombre.
+                    </label>
+
+                    <input type="text" placeholder="Ej. Johan Jimenez" class="rounded-lg border border-warmBeige
+                              bg-white p-3 outline-none
+                              focus:border-goldenWheat">
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label class="font-semibold text-deepCocoa">
+                        Cantidad de personas
+                    </label>
+
+                    <input type="number" placeholder="Ej. 20" class="rounded-lg border border-warmBeige
+                              bg-white p-3 outline-none
+                              focus:border-goldenWheat">
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label class="font-semibold text-deepCocoa">
+                        Presupuesto
+                    </label>
+
+                    <input type="number" placeholder="Ej. 150000" class="rounded-lg border border-warmBeige
+                              bg-white p-3 outline-none
+                              focus:border-goldenWheat">
+                </div>
+
+                <button type="submit" class="mt-2 rounded-lg bg-deepCocoa
+                           py-3 font-semibold text-oatCream
+                           transition hover:bg-rusticBrown">
+                    Enviar
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <footer class="flex flex-wrap items-center justify-center bg-warmBeige px-5 border-rusticBrown/20 h-25">
+        <p class="text-rusticBrown text-lg">Panadería la bendición, donde cada bocado guía al camino de la iluminación
+        </p>
+    </footer>
+</body>
+
+</html>

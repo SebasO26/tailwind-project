@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos | Panadería La Bendición</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --color-goldenWheat: #DAA520;
+            --color-rusticBrown: #8B4513;
+            --color-oatCream: #F5F5DC;
+            --color-warmBeige: #D2B48C;
+            --color-deepCocoa: #5C3317;
+        }
+    </style>
+</head>
+
+<body class="bg-oatCream flex flex-col min-h-screen">
+
+    <header>
+        <nav class="flex flex-wrap items-center gap-10 bg-warmBeige">
+            <img src="../img/logo.png" alt="Logo La Bendición" class="size-20">
+
+            <ul class="text-oatCream flex gap-10 text-lg h-20 items-center">
+                <li>
+                    <a href="../index.html" class="size-20 flex items-center justify-center hover:bg-rusticBrown">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="precios.html" class="size-20 flex items-center justify-center hover:bg-rusticBrown">
+                        Precios
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pedidos.html" class="size-20 flex items-center justify-center bg-rusticBrown">
+                        Pedidos
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <h1 class="text-3xl md:text-4xl text-center mt-12 text-warmBeige">
+            Panadería La Bendición
+        </h1>
+    </header>
+
+    <main class="flex-1 p-4 md:p-8">
+
+        <section class="bg-warmBeige mx-auto my-6 md:my-10
+                        max-w-6xl rounded-2xl p-6 md:p-10
+                        shadow-lg border border-goldenWheat/20">
+
+            <h2 class="text-3xl font-extrabold text-deepCocoa
+                       mb-3 border-b border-rusticBrown/20 pb-3">
+                Realiza tu pedido
+            </h2>
+
+            <p class="text-rusticBrown text-lg mb-8">
+                Selecciona tus productos favoritos y disfruta
+                de nuestras delicias artesanales.
+            </p>
+
+            <form class="flex flex-col gap-10">
+
+                <div>
+                    <h3 class="text-2xl font-bold text-deepCocoa mb-6">
+                        1. Selecciona tus productos
+                    </h3>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2
+                                lg:grid-cols-3 gap-6">
+
+                        <article class="bg-oatCream rounded-xl
+                                        overflow-hidden shadow-sm">
+
+                            <img src="../img/panChocha2.jpeg" alt="Pan chocha" class="w-full h-48 object-cover">
+
+                            <div class="p-5 flex flex-col gap-3">
+                                <h4 class="text-xl font-bold text-deepCocoa">
+                                    Pan chocha
+                                </h4>
+
+                                <p class="text-rusticBrown">
+                                    Pan artesanal relleno de tres
+                                    tipos de queso.
+                                </p>
+
+                                <label class="font-semibold text-deepCocoa">
+                                    Cantidad
+                                </label>
+
+                                <input type="number" name="pan_chocha" min="0" value="0" class="w-full rounded-lg border
+                                              border-warmBeige p-3
+                                              bg-white outline-none
+                                              focus:border-goldenWheat">
+                            </div>
+                        </article>
+
+                        <article class="bg-oatCream rounded-xl
+                                        overflow-hidden shadow-sm">
+
+                            <img src="../img/panBono.jpg" alt="Pan de bono" class="w-full h-48 object-cover">
+
+                            <div class="p-5 flex flex-col gap-3">
+                                <h4 class="text-xl font-bold text-deepCocoa">
+                                    Pan de bono
+                                </h4>
+
+                                <p class="text-rusticBrown">
+                                    Pan tradicional colombiano
+                                    elaborado con queso.
+                                </p>
+
+                                <label class="font-semibold text-deepCocoa">
+                                    Cantidad
+                                </label>
+
+                                <input type="number" name="pan_bono" min="0" value="0" class="w-full rounded-lg border
+                                              border-warmBeige p-3
+                                              bg-white outline-none
+                                              focus:border-goldenWheat">
+                            </div>
+                        </article>
+
+                        <article class="bg-oatCream rounded-xl
+                                        overflow-hidden shadow-sm">
+
+                            <img src="../img/almojabana.jpeg" alt="Almojábana" class="w-full h-48 object-cover">
+
+                            <div class="p-5 flex flex-col gap-3">
+                                <h4 class="text-xl font-bold text-deepCocoa">
+                                    Almojábana
+                                </h4>
+
+                                <p class="text-rusticBrown">
+                                    Preparación artesanal con
+                                    queso campesino y harina de maíz.
+                                </p>
+
+                                <label class="font-semibold text-deepCocoa">
+                                    Cantidad
+                                </label>
+
+                                <input type="number" name="almojabana" min="0" value="0" class="w-full rounded-lg border
+                                              border-warmBeige p-3
+                                              bg-white outline-none
+                                              focus:border-goldenWheat">
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold text-deepCocoa
+                               mb-6 border-b border-rusticBrown/20 pb-3">
+                        2. Datos del cliente
+                    </h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                        <div class="flex flex-col gap-2">
+                            <label for="nombre" class="font-semibold text-deepCocoa">
+                                Nombre completo
+                            </label>
+
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required class="rounded-lg border border-rusticBrown/30
+                                          bg-oatCream p-3 outline-none
+                                          focus:border-goldenWheat">
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label for="telefono" class="font-semibold text-deepCocoa">
+                                Número de teléfono
+                            </label>
+
+                            <input type="tel" id="telefono" name="telefono" placeholder="300 000 0000" required class="rounded-lg border border-rusticBrown/30
+                                          bg-oatCream p-3 outline-none
+                                          focus:border-goldenWheat">
+                        </div>
+
+                        <div class="flex flex-col gap-2 md:col-span-2">
+                            <label for="correo" class="font-semibold text-deepCocoa">
+                                Correo electrónico
+                            </label>
+
+                            <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" class="rounded-lg border border-rusticBrown/30
+                                          bg-oatCream p-3 outline-none
+                                          focus:border-goldenWheat">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold text-deepCocoa
+                               mb-6 border-b border-rusticBrown/20 pb-3">
+                        3. Información de entrega
+                    </h3>
+
+                    <div class="flex flex-col gap-5">
+
+                        <div class="flex flex-col gap-2">
+                            <label for="entrega" class="font-semibold text-deepCocoa">
+                                Método de entrega
+                            </label>
+
+                            <select id="entrega" name="entrega" required class="rounded-lg border border-rusticBrown/30
+                                           bg-oatCream p-3 outline-none
+                                           focus:border-goldenWheat">
+
+                                <option value="">Selecciona una opción</option>
+                                <option value="domicilio">Domicilio</option>
+                                <option value="recoger">Recoger en tienda</option>
+
+                            </select>
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label for="direccion" class="font-semibold text-deepCocoa">
+                                Dirección de entrega
+                            </label>
+
+                            <input type="text" id="direccion" name="direccion" placeholder="Ingresa tu dirección" class="rounded-lg border border-rusticBrown/30
+                                          bg-oatCream p-3 outline-none
+                                          focus:border-goldenWheat">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                            <div class="flex flex-col gap-2">
+                                <label for="fecha" class="font-semibold text-deepCocoa">
+                                    Fecha del pedido
+                                </label>
+
+                                <input type="date" id="fecha" name="fecha" required class="rounded-lg border border-rusticBrown/30
+                                              bg-oatCream p-3 outline-none
+                                              focus:border-goldenWheat">
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <label for="hora" class="font-semibold text-deepCocoa">
+                                    Hora de entrega
+                                </label>
+
+                                <input type="time" id="hora" name="hora" required class="rounded-lg border border-rusticBrown/30
+                                              bg-oatCream p-3 outline-none
+                                              focus:border-goldenWheat">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold text-deepCocoa mb-4">
+                        4. Observaciones adicionales
+                    </h3>
+
+                    <textarea name="observaciones" rows="4"
+                        placeholder="¿Tienes alguna solicitud especial para tu pedido?" class="w-full rounded-lg border border-rusticBrown/30
+                                     bg-oatCream p-3 outline-none resize-y
+                                     focus:border-goldenWheat"></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+
+                    <button type="reset" class="rounded-lg border-2 border-deepCocoa
+                                   px-6 py-3 font-bold text-deepCocoa
+                                   transition hover:bg-deepCocoa
+                                   hover:text-oatCream">
+                        Limpiar formulario
+                    </button>
+
+                    <button type="submit" class="flex-1 rounded-lg bg-deepCocoa
+                                   px-6 py-3 font-bold text-oatCream
+                                   transition hover:bg-rusticBrown">
+                        Realizar pedido
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="flex flex-wrap items-center justify-center
+                   bg-warmBeige px-5 min-h-25 text-center">
+
+        <p class="text-rusticBrown text-lg">
+            Panadería La Bendición, donde cada bocado guía
+            al camino de la iluminación.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

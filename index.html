@@ -21,12 +21,20 @@
 
 <body class="bg-oatCream flex flex-col min-h-screen">
     <header>
-        <nav class="flex flex-wrap items-center gap-10 bg-warmBeige px-5 border-rusticBrown/20">
-            <img src="img/logo.png" alt="Logo La Bendición" class="size-25">
-            <ul class="text-oatCream flex gap-10 text-lg">
-                <li>Inicio</li>
-                <li>Precios</li>
-                <li>Pedidos</li>
+        <nav class="flex flex-wrap items-center gap-10 bg-warmBeige border-rusticBrown/20">
+            <img src="img/logo.png" alt="Logo La Bendición" class="size-20">
+            <ul class="text-oatCream flex gap-10 text-lg h-20 items-center">
+                <a href="index.html" class="size-20 flex flex-col justify-center text-center hover:bg-rusticBrown">
+                    <li>Inicio</li>
+                </a>
+                <a href="/pages/precios.html"
+                    class="size-20 flex flex-col justify-center text-center hover:bg-rusticBrown">
+                    <li>Precios</li>
+                </a>
+                <a href="/pages/pedidos.html"
+                    class="size-20 flex flex-col justify-center text-center hover:bg-rusticBrown">
+                    <li>Pedidos</li>
+                </a>
             </ul>
         </nav>
         <h1 class="text-4xl text-center mt-15 text-warmBeige">Panadería la bendición</h1>
@@ -62,7 +70,7 @@
                 Productos y servicios
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
                 <div class="bg-oatCream rounded-2xl flex flex-col gap-5">
                     <img src="img/panChocha2.jpeg" alt="" class="w-auto rounded-tr-2xl rounded-tl-2xl max-h-100">
                     <h3 class="text-2xl text-center">
