@@ -8,20 +8,28 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <style type="text/tailwindcss">
+        @custom-variant dark (&:where(.dark, .dark *));
         @theme {
             --color-goldenWheat: #DAA520;
             --color-rusticBrown: #8B4513;
             --color-oatCream: #F5F5DC;
             --color-warmBeige: #D2B48C;
             --color-deepCocoa: #5C3317;
+
+
+            --color-darkChocolate: #17110D;
+            --color-roastedCocoa: #241810;
+            --color-mochaBrown: #3D281B;
+            --color-caramelGold: #D2A679;
+            --color-vanillaCream: #F5E6CC;
         }
     </style>
 </head>
 
-<body class="bg-oatCream min-h-screen flex flex-col text-rusticBrown">
-    <header class="bg-warmBeige shadow-sm">
+<body class="bg-oatCream min-h-screen flex flex-col text-rusticBrown dark:bg-darkChocolate">
+    <header class="bg-warmBeige shadow-sm dark:bg-roastedCocoa">
         <nav
-            class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between p-4 sm:px-8 gap-4 border-b border-rusticBrown/20">
+            class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between p-4 sm:px-8 gap-4 border-b border-rusticBrown/20 dark:text-vanillaCream">
             <img src="../img/logo.png" alt="Logo La Bendición" class="w-16 h-16 object-contain">
             <ul class="flex flex-wrap justify-center gap-2 sm:gap-6 text-base sm:text-lg font-semibold">
                 <li>
@@ -44,23 +52,26 @@
                 </li>
             </ul>
         </nav>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center my-6 md:my-10 text-deepCocoa px-4">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center my-6 md:my-10 text-deepCocoa dark:text-vanillaCream px-4">
             Panadería La Bendición
         </h1>
     </header>
 
     <main class="flex-1 p-4 md:p-8 max-w-6xl mx-auto w-full">
-        <section class="bg-warmBeige rounded-2xl p-6 md:p-10 shadow-lg border border-goldenWheat/20">
-            <h2 class="text-2xl md:text-3xl font-extrabold text-deepCocoa mb-3 border-b border-rusticBrown/20 pb-3">
+        <section
+            class="bg-warmBeige rounded-2xl p-6 md:p-10 shadow-lg border border-goldenWheat/20 dark:bg-roastedCocoa">
+            <h2
+                class="text-2xl md:text-3xl font-extrabold text-deepCocoa dark:text-vanillaCream mb-3 border-b border-rusticBrown/20 pb-3">
                 Tarifas para eventos
             </h2>
-            <p class="text-base md:text-lg mb-8 text-rusticBrown">
+            <p class="text-base md:text-lg mb-8 text-rusticBrown dark:text-vanillaCream">
                 Elige tu paquete y disfruta de nuestras delicias.
             </p>
 
             <div class="w-full overflow-x-auto rounded-xl border border-deepCocoa/30 shadow-sm mt-6">
-                <table class="w-full border-collapse text-left text-sm md:text-base">
-                    <thead class="bg-deepCocoa text-oatCream">
+                <table class="w-full border-collapse text-left text-sm md:text-base dark:text-deepCocoa">
+                    <thead class="bg-deepCocoa text-oatCream ">
                         <tr>
                             <th class="px-4 md:px-6 py-4 font-semibold">Cantidad de personas</th>
                             <th class="px-4 md:px-6 py-4 font-semibold">Paquete</th>
@@ -115,17 +126,31 @@
                 </table>
             </div>
 
-            <p class="text-base md:text-lg text-rusticBrown mt-8">
+            <p class="text-base md:text-lg text-rusticBrown mt-8 dark:text-vanillaCream">
                 Si necesitas una mayor asesoría porque no hay algún plan que se acomode a tu presupuesto o necesidad,
-                <a href="#modal" class="underline font-semibold hover:text-deepCocoa transition-colors">contáctanos.</a>
+                <a href="#modal"
+                    class="underline font-semibold hover:text-deepCocoa dark:text-vanillaCream transition-colors">contáctanos.</a>
             </p>
         </section>
+
+        <button id="themeToggle" class="fixed bottom-6 right-6 z-50
+    w-14 h-14 rounded-full
+    bg-rusticBrown text-oatCream
+    dark:bg-caramelGold dark:text-darkChocolate
+    shadow-lg hover:scale-110
+    transition-all duration-300
+    flex items-center justify-center
+    text-2xl cursor-pointer">
+
+            🌙
+
+        </button>
     </main>
 
     <div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-deepCocoa/60 p-4 target:flex">
-        <div class="relative w-full max-w-lg rounded-2xl bg-oatCream p-6 md:p-8 shadow-xl">
+        <div class="relative w-full max-w-lg rounded-2xl bg-oatCream p-6 md:p-8 shadow-xl dark:bg-roastedCocoa">
             <div class="mb-6 flex items-center justify-between">
-                <h2 class="text-xl md:text-2xl font-bold text-deepCocoa">
+                <h2 class="text-xl md:text-2xl font-bold text-deepCocoa dark:text-vanillaCream">
                     Contacto vía Correo
                 </h2>
                 <a href="#" class="text-2xl font-bold text-rusticBrown hover:text-goldenWheat transition-colors">
@@ -135,7 +160,7 @@
 
             <form class="flex flex-col gap-4">
                 <div class="flex flex-col gap-2">
-                    <label class="font-semibold text-deepCocoa">
+                    <label class="font-semibold text-deepCocoa dark:text-vanillaCream">
                         Nombre
                     </label>
                     <input type="text" placeholder="Ej. Johan Jimenez" required
@@ -143,7 +168,7 @@
                 </div>
 
                 <div class="flex flex-col gap-2">
-                    <label class="font-semibold text-deepCocoa">
+                    <label class="font-semibold text-deepCocoa dark:text-vanillaCream">
                         Cantidad de personas
                     </label>
                     <input type="number" min="1" placeholder="Ej. 20" required
@@ -151,7 +176,7 @@
                 </div>
 
                 <div class="flex flex-col gap-2">
-                    <label class="font-semibold text-deepCocoa">
+                    <label class="font-semibold text-deepCocoa dark:text-vanillaCream">
                         Presupuesto
                     </label>
                     <input type="number" min="0" placeholder="Ej. 150000" required
@@ -159,18 +184,21 @@
                 </div>
 
                 <button type="submit"
-                    class="mt-4 rounded-lg bg-deepCocoa py-3 font-semibold text-oatCream transition-colors hover:bg-rusticBrown cursor-pointer">
+                    class="mt-4 rounded-lg bg-deepCocoa py-3 font-semibold text-oatCream transition-colors hover:bg-rusticBrown cursor-pointer dark:bg-caramelGold dark:text-mochaBrown">
                     Enviar
                 </button>
             </form>
         </div>
     </div>
 
-    <footer class="bg-warmBeige border-t border-rusticBrown/20 p-6 mt-10">
-        <p class="text-center text-base md:text-lg font-medium max-w-xl mx-auto text-rusticBrown">
+    <footer class="bg-warmBeige border-t border-rusticBrown/20 p-6 mt-10 dark:bg-roastedCocoa">
+        <p
+            class="text-center text-base md:text-lg font-medium max-w-xl mx-auto text-rusticBrown dark:text-vanillaCream">
             Panadería La Bendición, donde cada bocado guía al camino de la iluminación.
         </p>
     </footer>
+
+    <script src="../js/darkMode.js"></script>
 </body>
 
 </html>
