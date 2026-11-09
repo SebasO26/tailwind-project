@@ -28,34 +28,75 @@
 
 <body class="bg-oatCream min-h-screen flex flex-col text-rusticBrown dark:bg-darkChocolate">
     <header class="bg-warmBeige shadow-sm dark:bg-roastedCocoa">
-        <nav
-            class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between p-4 sm:px-8 gap-4 border-b border-rusticBrown/20 dark:text-vanillaCream">
+
+        <nav class="max-w-7xl mx-auto flex items-center justify-between p-4 sm:px-8 border-b border-rusticBrown/20">
+
             <img src="../img/logo.png" alt="Logo La Bendición" class="w-16 h-16 object-contain">
-            <ul class="flex flex-wrap justify-center gap-2 sm:gap-6 text-base sm:text-lg font-semibold">
+
+            <details class="relative sm:hidden">
+                <summary class="cursor-pointer list-none text-3xl text-deepCocoa dark:text-vanillaCream">
+                    ☰
+                </summary>
+
+                <ul
+                    class="absolute right-0 top-12 z-50 w-48 flex flex-col gap-2 p-3 rounded-lg shadow-lg bg-warmBeige dark:bg-roastedCocoa text-base font-semibold">
+
+                    <li>
+                        <a href="../index.html"
+                            class="px-4 py-2 rounded-lg block hover:bg-rusticBrown hover:text-oatCream transition-colors">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="precios.html"
+                            class="px-4 py-2 rounded-lg block hover:bg-rusticBrown hover:text-oatCream transition-colors">
+                            Precios
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pedidos.html"
+                            class="px-4 py-2 rounded-lg block hover:bg-rusticBrown hover:text-oatCream transition-colors">
+                            Pedidos
+                        </a>
+                    </li>
+
+                </ul>
+            </details>
+
+            <ul class="hidden sm:flex flex-wrap justify-center gap-2 sm:gap-6 text-base sm:text-lg font-semibold">
+
                 <li>
                     <a href="../index.html"
                         class="px-4 py-2 rounded-lg block hover:bg-rusticBrown hover:text-oatCream transition-colors">
                         Inicio
                     </a>
                 </li>
+
                 <li>
                     <a href="precios.html"
-                        class="px-4 py-2 rounded-lg block bg-rusticBrown text-oatCream transition-colors">
+                        class="px-4 py-2 rounded-lg block hover:bg-rusticBrown hover:text-oatCream transition-colors">
                         Precios
                     </a>
                 </li>
+
                 <li>
                     <a href="pedidos.html"
                         class="px-4 py-2 rounded-lg block hover:bg-rusticBrown hover:text-oatCream transition-colors">
                         Pedidos
                     </a>
                 </li>
+
             </ul>
+
         </nav>
+
         <h1
-            class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center my-6 md:my-10 text-deepCocoa dark:text-vanillaCream px-4">
+            class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center my-6 md:my-10 text-deepCocoa px-4 dark:text-vanillaCream">
             Panadería La Bendición
         </h1>
+
     </header>
 
     <main class="flex-1 p-4 md:p-8 max-w-6xl mx-auto w-full">
